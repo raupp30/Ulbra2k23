@@ -42,9 +42,10 @@ $routes->resource('client');
 
 //rotas comuns
 $routes->get('/home', 'Site::view/home');
-$routes->get('/about', 'Site::view/about');
-$routes->get('/products', 'Site::view/products');
-$routes->get('/contact', 'Site::view/contact');
+$routes->get('/pronta_entrega', 'Site::view/pronta_entrega');
+$routes->get('/selecoes', 'Site::view/selecoes');
+$routes->get('/brasileirao', 'Site::view/brasileirao');
+$routes->get('/europa', 'Site::view/europa');
 $routes->get('/listClients', 'Client::listClients');
 
 //rotas do admin

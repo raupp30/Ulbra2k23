@@ -17,37 +17,37 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 
     <script src="assets/js/script.js"></script>
-    <link rel="stylesheet" href="<?=base_url('assets/css/style.css')?>">
+     <link rel="stylesheet" href="<?=base_url('assets/css/style.cs(OFF)')?>">
 
   </head>
   <body>
-    <header>
-      <h2>Avaliação Semestral PW</h2>
+  <header class="p-1 text-black" >
+      <p class="text-center text-black">Frete grátis para todo Brasil</p>
+      <p><a href="<?=base_url('/admin')?>">Área Administrativa</a></p>
+    </header>
+    <header class="p-5 bg-black" >
+      <h2 class="text-center text-white">Raupp Sports</h2>
+      <p class="text-center text-white">Seu time, seu estilo</p>
     </header>
 
-    <div class="container-fluid">
-      <div class="row">
-        <nav class="p-3 col-md-2">
-          <h3>Menu</h3>
-          <ul class="nav flex-column">
-            <li class="nav-item">
-              <a class="nav-link" href="<?=base_url('home')?>">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="<?=base_url('about')?>">Sobre</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="<?=base_url('products')?>">Produtos e Serviços</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="<?=base_url('contact')?>">Contato</a>
-            </li>
-          </ul>
-          <h3>Clientes</h3>
-          <ul class="nav flex-column">
-            <li class="nav-item">
-              <a class="nav-link" href="<?=base_url('listClients')?>">Listagem de Clientes</a>
-            </li>
-          </ul>
-        </nav>
-        <section class="p-3 col-md-10">
+  <nav class="navbar navbar-expand-sm bg-dark color-white justify-content-center">
+    
+  <ul class="nav justify-content-center p-1 navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="<?=base_url('home')?>">ìnicio</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="<?=base_url('pronta_entrega')?>">Pronta Entrega</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="<?=base_url('selecoes')?>">Seleções</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="<?=base_url('brasileirao')?>">Brasileirão</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="<?=base_url('europa')?>">Europa</a>
+      </li>
+    </ul>
+  </nav>
+        <section class="col-md-12 p-5 text-center">
