@@ -1,30 +1,46 @@
+// main
 public class Main {
     public static void main(String[] args) {
-        Livro livro1 = new Livro("Java em 2023", "Joãozinho Dev", 2023, true);
-        Livro livro2 = new Livro("C# em 1999", "Juninho Dev", 1999, true);
-        Livro livro3 = new Livro("PHP em 2004", "Pedrinho Dev", 2004, true);
-        Livro livro4 = new Livro("C/C++ em 2001", "Vitinho Dev", 2001, true);
-        Livro livro5 = new Livro("Python em 2015", "Luquinhas Dev", 2015, true);
+        Biblioteca biblioteca = new Biblioteca();
 
-        System.out.println("Título do livro: "+livro1.titulo);
-        System.out.println("Autor do livro: "+livro1.autor);
-        System.out.println("Ano de públicação do livro: "+livro1.AnoPublicacao);
-        System.out.println("O livro está disponível: "+livro1.disponibilidade);
-        System.out.println("---------------------------------");
+        // Criando livros
+        Livro livro1 = new Livro("Livro 0110", "Autor 0110", 1910, true);
+        Livro livro2 = new Livro("Livro 0220", "Autor 0220", 1920, false);
+        Livro livro3 = new Livro("Livro 0330", "Autor 0330", 1930, true);
+        Livro livro4 = new Livro("Livro 0440", "Autor 0550", 1940, true);
+        Livro livro5 = new Livro("Livro 0550", "Autor 0550", 1950, false);
 
-        Biblioteca biblioteca1 = new Biblioteca();
-        biblioteca1.AdicionarLivro(livro1);
-        biblioteca1.AdicionarLivro(livro2);
-        biblioteca1.AdicionarLivro(livro3);
-        biblioteca1.AdicionarLivro(livro4);
-        biblioteca1.AdicionarLivro(livro5);
+        // adicionando os livros na biblioteca
+        biblioteca.adicionarLivro(livro1);
+        biblioteca.adicionarLivro(livro2);
+        biblioteca.adicionarLivro(livro3);
+        biblioteca.adicionarLivro(livro4);
+        biblioteca.adicionarLivro(livro5);
 
-        System.out.println(biblioteca1.verificarDisponibilidade(livro1));
-        System.out.println(biblioteca1.verificarDisponibilidade(livro5));
-        System.out.println("---------------------------------");
+        // mostrando os detalhes dos livros
+        System.out.println(livro1.detalhesDoProduto());
+        System.out.println("------------------------");
+        System.out.println(livro2.detalhesDoProduto());
+        System.out.println("------------------------");
+        System.out.println(livro3.detalhesDoProduto());
+        System.out.println("------------------------");
+        System.out.println(livro4.detalhesDoProduto());
+        System.out.println("------------------------");
+        System.out.println(livro5.detalhesDoProduto());
+        System.out.println("------------------------");
 
-        biblioteca1.RemoverLivro(livro1);
-        biblioteca1.RemoverLivro(livro5);
-        biblioteca1.AtualizarDetalhesDoLivro(livro1, "joaozi", "joaozinhu", 2022, true);
+        // verificando se o livro ta disponivel
+        System.out.println("Disponibilidade do livro 1: " + biblioteca.verificarDisponibilidadeLivro(livro1));
+        System.out.println("------------------------");
+        System.out.println("Disponibilidade do livro 2: " + biblioteca.verificarDisponibilidadeLivro(livro2));
+        System.out.println("------------------------");
+
+        // Removendo um livro
+        biblioteca.removerLivro(livro3);
+
+        // Atualizando detalhes de um livro
+        biblioteca.atualizarDetalhesLivro(livro2, "nvo titulo", "novo autor", 2023);
+
+        System.out.println(livro2.detalhesDoProduto());
     }
 }
